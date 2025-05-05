@@ -1,4 +1,62 @@
-.tasks, .task{
+.tasks, .task-form{
     display: flex;
     flex-flow: column nowrap;
+    gap: 5px;
+}
+
+.task-form{
+    width: 50%;
+}
+
+.task-form > input{
+    padding: 13px;
+    border-radius: 8px;
+    border: none;
+}
+
+.task-form > input::placeholder{
+    color: rgb(11, 11, 59);
+    opacity: 60%;
+}
+
+.task-form > input:focus{
+    outline: none;
+}
+
+button{
+    background-color: rgb(11, 11, 59);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.task{
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: space-between;
+    background-color: rgb(122, 226, 252);
+    border-radius: 15px;
+    padding: 25px;
+    align-items: center;
+}
+
+
+.container{
+    margin: auto;
+    width: 50%;
+    margin-top: 10vh;
+}
+
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(175, 238, 253);
+    color: rgb(11, 11, 59);
+}
+
+.clear-btn{
+    width: 25%;
 }

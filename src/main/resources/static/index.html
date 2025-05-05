@@ -1,41 +1,26 @@
-<!DOCTYPE xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,100;1,300;1,400;&display=swap" rel="stylesheet"> -->
     <link href="styles.css" rel="stylesheet">
     <title>Task Manager</title>
 </head>
 <body>
     <div class="container">
-       <form method="post" id="new-task" onsubmit="AddTask(event)">
-        <input type="text" name="task" placeholder="To Do" required>
-        <input type="time" name="time" required>
-        <input type="submit" value="Add Task">
-       </form>
-    </div>
-
-    <div>
-        <div class="tasks">
-            <div class="task">
-                <h4>Clean the room</h4>
-                <h1>4:30 PM</h1>
-            </div>
-            <br/>
-            <div class="task">
-                <h4>Clean the room</h4>
-                <h1>4:30 PM</h1>
-            </div>
-            <br/>
-            <div class="task">
-                <h4>Clean the room</h4>
-                <h1>4:30 PM</h1>
-            </div>
-            <br/>
-            <div class="task">
-                <h4>Clean the room</h4>
-                <h1>4:30 PM</h1>
-            </div>
+        <h1>New Task:</h1>
+        <form method="post" class="task-form" id="new-task" onsubmit="AddTask(event)">
+            <input type="text" name="task" placeholder="To Do" required>
+            <input type="time" name="time" required>
+            <button>Add Task</button>
+        </form>
+        <br/><br/>
+        <h1>To Do:</h1>
+        <div class="tasks" id="tasks">
         </div>
+
     </div>
     <script src="index.js"></script>
 </body>

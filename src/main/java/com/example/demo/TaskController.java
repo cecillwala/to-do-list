@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 
 
 @Controller
-public class HomeController {
+public class TaskController {
 
     @Autowired
     private TasksRepo repo;
@@ -27,6 +27,18 @@ public class HomeController {
     @ResponseBody
     public List<Task> list_tasks(){
         return repo.findAll();
+    }
+
+    @DeleteMapping("/remove_task/{id}")
+    @ResponseBody
+    public void remove_task(@PathVariable Long id){
+        repo.deleteById(id);
+    }
+
+    @DeleteMapping("/remove_all_tasks")
+    @ResponseBody
+    public void remove_all_tasks(){
+        repo.deleteAll();
     }
 
 }
