@@ -23,7 +23,7 @@
     outline: none;
 }
 
-button{
+button, .done-btn{
     background-color: rgb(11, 11, 59);
     color: #ffffff;
     border: none;
@@ -31,16 +31,40 @@ button{
     padding: 12px;
 }
 
-.task{
+.task, .complete-task{
     display: flex;
     flex-flow: row nowrap; 
     justify-content: space-between;
-    background-color: rgb(122, 226, 252);
+    color: #ffff;
+    background-color: rgb(11, 11, 59);
     border-radius: 15px;
     padding: 25px;
     align-items: center;
 }
 
+.done-btn{
+    background-color: rgb(58, 191, 255);
+}
+
+.remove-task{
+    color:rgb(11, 11, 59);
+    border-radius: 150%;
+    border: none;
+    padding: 10px;
+}
+
+.remove-task:hover{
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+    background-color: rgb(19, 158, 212);
+    border: none;
+    color:rgb(175, 238, 253);
+}
+
+.complete-task{
+    background-color: rgb(88, 222, 255);
+    color: rgb(19, 158, 212);
+}
 
 .container{
     margin: auto;

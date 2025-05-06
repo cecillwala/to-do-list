@@ -26,7 +26,23 @@ public class TaskController {
     @GetMapping("/list-tasks")
     @ResponseBody
     public List<Task> list_tasks(){
-        return repo.findAll();
+        return repo.findByDone(false);
+    }
+
+
+    @GetMapping("/list-complete-tasks")
+    @ResponseBody
+    public List<Task> list_complete_tasks(){
+        return repo.findByDone(true);
+    }
+
+
+    @PutMapping("/mark_done/{id}")
+    @ResponseBody
+    public void mark_task_done(@PathVariable Long id){
+        Task task = repo.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        task.setIsDone(true);
+        repo.save(task);
     }
 
     @DeleteMapping("/remove_task/{id}")
