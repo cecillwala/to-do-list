@@ -18,12 +18,9 @@ public class Task {
     private String time;
     private boolean done = false;
     
-    //  Task ID Getter and Setter
+    //  Task ID Getter
     public Long getId(){
         return this.id;
-    }
-    public void setId(Long id){
-        this.id = id;
     }
 
     //  Task name Getter and Setter
